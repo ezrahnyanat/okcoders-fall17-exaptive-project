@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 
 
-class Display extends Component {
+class Xaps extends Component {
+    constructor(props) {
+        super(props)
+        this.state= {}
+    }
 
 
     render () {
@@ -16,4 +20,4 @@ class Display extends Component {
 
 
 
-export default Display
+export default Xaps
