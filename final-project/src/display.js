@@ -13,12 +13,10 @@ class Display extends Component {
     constructor(props){
         super(props)
 
-        this.state = {open: false}
+        this.state = {open: true}
     }
 
     handleToggle = () => this.setState({open: !this.state.open})
-
-    handleClose = () => this.setState({open: false})
 
     render () {
         return (
@@ -27,12 +25,7 @@ class Display extends Component {
                     label="Exaptive"
                     onClick={this.handleToggle}
                 />
-                <Drawer 
-                    docked={false}
-                    width={200}
-                    open={this.state.open}
-                    onRequestChange={(open) => this.setState({open})}
-                    >
+                <Drawer open={this.state.open}>
                     <MenuItem><Link to = "./Introduction">Introduction</Link></MenuItem>
                     <MenuItem><Link to = "./ExaptiveComponents">Components</Link></MenuItem>
                     <MenuItem><Link to = "./Xaps">Xaps</Link></MenuItem>
