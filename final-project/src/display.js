@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import AppBar from 'material-ui/AppBar'
 import Drawer from 'material-ui/Drawer'
 import {List, ListItem,makeSelectable} from 'material-ui/List';
 import RaisedButton from 'material-ui/RaisedButton'
@@ -79,11 +80,13 @@ class Display extends Component {
     render () {
         return (
             <div>
-                <RaisedButton
-                    label="Exaptive"
+                <AppBar
+                    title='exaptive'
                     onClick={this.handleToggle}
+                    style={{backgroundColor: '#052334'}}
                 />
                 <Drawer 
+                    width={200}
                     docked={false}
                     open={this.state.open}
                     onRequestChange={(open) => this.setState({open})}

@@ -36,11 +36,15 @@ class ExaptiveComponent extends Component {
   }
 
   renderComponentData(data) {
-    var Converter = require('react-showdown').Converter;
-    var converter = new Converter();
+    const Converter = require('react-showdown').Converter;
+    const converter = new Converter();
+    const style = {
+      paddingLeft: 225,
+      paddingRight: 225
+    }
     if (data) {
       return (
-        <div>
+        <div style={style}>
         <h1>{data.name}</h1>
         <h4>{converter.convert(data.description)}</h4>
         </div>
