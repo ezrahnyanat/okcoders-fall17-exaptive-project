@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import { Markdown } from 'react-showdown'
 
 class ExaptiveComponent extends Component {
   constructor(props) {
@@ -7,6 +8,7 @@ class ExaptiveComponent extends Component {
     this.state = {}
     console.log(props)
   }
+
   componentDidUpdate(prevProps,prevState){
     const id = this.props.match.params.id
     if(id!== prevProps.match.params.id){
@@ -16,6 +18,7 @@ class ExaptiveComponent extends Component {
       	.then(this.successAjaxHandler)  	
 	}
   }
+
   componentDidMount() {
     const id = this.props.match.params.id
     console.log("id is:");
@@ -33,11 +36,13 @@ class ExaptiveComponent extends Component {
   }
 
   renderComponentData(data) {
+    var Converter = require('react-showdown').Converter;
+    var converter = new Converter();
     if (data) {
       return (
         <div>
         <h1>{data.name}</h1>
-        <h4>{data.description}</h4>
+        <h4>{converter.convert(data.description)}</h4>
         </div>
       )
     }
