@@ -18,7 +18,7 @@ class Display extends Component {
     constructor(props){
         super(props);
         this.state = {
-            open: true,
+            open: false,
             selectedIndex: 0
 
         };
@@ -28,6 +28,8 @@ class Display extends Component {
 
 
     handleToggle = () => this.setState({open: !this.state.open});
+
+    
 
     handleRequestChange (event, index) {
         console.log("Selected index is: ",index);
@@ -81,12 +83,18 @@ class Display extends Component {
                     label="Exaptive"
                     onClick={this.handleToggle}
                 />
-                <Drawer open={this.state.open}>
+                <Drawer 
+                    docked={false}
+                    open={this.state.open}
+                    onRequestChange={(open) => this.setState({open})}
+                    >
                       <h1> {this.state.data && this.state.data.name} </h1>
                     <SelectableList value={this.state.selectedIndex} onChange={this.handleRequestChange.bind(this)}>
-                        <ListItem value={0} primaryText="Introduction" leftIcon={<ContentInfo />} />
+                        <ListItem value={0}
+                            primaryText = {<Link to="/Introduction"> Introduction </Link>}
+                            leftIcon={<ContentInfo />} />
                         <ListItem
-                            primaryText="Components"
+                            primaryText = {<Link to="/ExaptiveComponents"> Components </Link>}
                             value={1}
                             leftIcon={<ContentInbox />}
                             initiallyOpen={true}
@@ -95,7 +103,7 @@ class Display extends Component {
                             nestedItems={this.renderComponentList(this.state.xapData)}
                             />
                         <ListItem
-                            primaryText="Xaps"
+                            primaryText = {<Link to="/Xaps"> Xaps </Link>}
                             value={2}
                             leftIcon={<ContentInbox />}
                             initiallyOpen={true}
