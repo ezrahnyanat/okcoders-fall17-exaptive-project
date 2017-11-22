@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { List, ListItem, makeSelectable } from 'material-ui/List'; 
 import ExapComponents from './ExapComponents.json';
 import { GetComponents } from './XapComponentService'
+import { Link } from 'react-router-dom'
 
 let SelectableList = makeSelectable(List)
 
@@ -45,8 +46,6 @@ class ComponentList extends Component {
     constructor(props) {
         super(props)
         this.state = {}
-        console.log('comps are',ExapComponents);
-        
     }
 
     componentDidMount() {
@@ -57,22 +56,21 @@ class ComponentList extends Component {
         })
     }
 
-    renderListItems =(ExapComponents) => {
+    renderListItems =(data) => {
         return (
             <SelectableList>
-                {this.makeComponentList(ExapComponents)}
+                {this.makeComponentList(data)}
             </SelectableList>
         )
     }
 
-    makeComponentList = (ExapComponents) => {
-        console.log('ExapComps are' ,ExapComponents);
-        
+    makeComponentList = (data) => {
         return ExapComponents.map(i => {
+            const to = `/mycomponent/${i.UUID}`
             return (
                 <ListItem
                     value={i} 
-                    primaryText={i.Name}
+                    primaryText={ <Link to={to}> {i.Name} </Link> }
                     secondaryText={i.Category}
                 />
             )

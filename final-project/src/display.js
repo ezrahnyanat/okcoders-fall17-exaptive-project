@@ -12,7 +12,11 @@ import ContentInbox from 'material-ui/svg-icons/content/inbox';
 import ContentDrafts from 'material-ui/svg-icons/content/drafts';
 import ContentInfo from 'material-ui/svg-icons/action/info';
 import axios from 'axios';
+import GetComponents from './XapComponentService'
+import ComponentList from './ComponentList'
+
 let SelectableList = makeSelectable(List);
+
 class Display extends Component {
     constructor(props){
         super(props);
@@ -90,7 +94,7 @@ class Display extends Component {
                             initiallyOpen={true}
                             primaryTogglesNestedList={true}
                             //render components here..don't have the the right apis yet.                            
-                            nestedItems={this.renderComponentList(this.state.xapData)}
+                            nestedItems={[<ComponentList />]}
                             />
                         <ListItem
                             primaryText = {<Link to="/Xaps"> Xaps </Link>}
