@@ -7,20 +7,24 @@ class ExaptiveComponent extends Component {
     this.state = {}
     console.log(props)
   }
-
-  componentWillReceiveProps(props){
-  	console.log(props);
-
+  componentDidUpdate(prevProps,prevState){
+    const id = this.props.match.params.id
+    if(id!== prevProps.match.params.id){
+    	const url = `${this.props.componentBase}/${id}/spec.json`
+    	axios
+      	.get(url)
+      	.then(this.successAjaxHandler)  	
+	}
   }
   componentDidMount() {
     const id = this.props.match.params.id
     console.log("id is:");
     console.log(id);    
     const url = `${this.props.componentBase}/${id}/spec.json`
+
     axios
       .get(url)
       .then(this.successAjaxHandler)
-      this.setState();
   }
 
   successAjaxHandler = (res) => {
