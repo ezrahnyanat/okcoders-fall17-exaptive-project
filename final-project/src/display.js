@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import AppBar from 'material-ui/AppBar'
 import Drawer from 'material-ui/Drawer'
 import {List, ListItem,makeSelectable} from 'material-ui/List';
 import RaisedButton from 'material-ui/RaisedButton'
@@ -11,34 +12,25 @@ import ContentInbox from 'material-ui/svg-icons/content/inbox';
 import ContentDrafts from 'material-ui/svg-icons/content/drafts';
 import ContentInfo from 'material-ui/svg-icons/action/info';
 import axios from 'axios';
-import ComponentList from './ComponentList'
 let SelectableList = makeSelectable(List);
-
 class Display extends Component {
-
     constructor(props){
         super(props);
         this.state = {
             open: false,
             selectedIndex: 0
-
         };
         console.log("I am in display constructor.");
         console.log(props.xapsBase);
     }
-
-
     handleToggle = () => this.setState({open: !this.state.open});
-
     
-
     handleRequestChange (event, index) {
         console.log("Selected index is: ",index);
     this.setState({
         selectedIndex: index
     })
     }
-
     componentDidMount() {
         console.log("I am in display.");
         console.log(this.props);
@@ -49,7 +41,6 @@ class Display extends Component {
         .get(this.props.componentBase)
         .then(this.successAjaxHandlerForComps)        
     }
-
       successAjaxHandlerForXaps = (res) => {
         this.setState({xapData: res.data});
         console.log("xapData fetched");
@@ -75,8 +66,6 @@ class Display extends Component {
                 })
             }
         }
-
-
     render () {
         return (
             <div>
@@ -101,8 +90,7 @@ class Display extends Component {
                             initiallyOpen={true}
                             primaryTogglesNestedList={true}
                             //render components here..don't have the the right apis yet.                            
-                            // nestedItems={this.renderComponentList(this.state.xapData)}
-                            nestedItems={<ComponentList />}
+                            nestedItems={this.renderComponentList(this.state.xapData)}
                             />
                         <ListItem
                             primaryText = {<Link to="/Xaps"> Xaps </Link>}
@@ -113,17 +101,10 @@ class Display extends Component {
                             //render xaps here..don't have the the right apis yet.
                             nestedItems={this.renderComponentList(this.state.xapData)}
                             />
-<<<<<<< HEAD
-                    </List>
-                    <ComponentList />
-=======
                     </SelectableList>
->>>>>>> b1608324f202240399f7ebc8f0888d6704e01be7
                 </Drawer>
             </div>
         )
     }
-
 }
-
 export default Display
