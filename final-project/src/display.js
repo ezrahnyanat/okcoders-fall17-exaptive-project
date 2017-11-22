@@ -12,6 +12,7 @@ import ContentInbox from 'material-ui/svg-icons/content/inbox';
 import ContentDrafts from 'material-ui/svg-icons/content/drafts';
 import ContentInfo from 'material-ui/svg-icons/action/info';
 import axios from 'axios';
+import ComponentList from './ComponentList'
 
 class Display extends Component {
 
@@ -79,7 +80,8 @@ class Display extends Component {
                             initiallyOpen={true}
                             primaryTogglesNestedList={true}
                             //render components here..don't have the the right apis yet.                            
-                            nestedItems={this.renderComponentList(this.state.xapData)}
+                            // nestedItems={this.renderComponentList(this.state.xapData)}
+                            nestedItems={<ComponentList />}
                             />
                         <ListItem
                             primaryText="Xaps"
@@ -90,6 +92,7 @@ class Display extends Component {
                             nestedItems={this.renderComponentList(this.state.xapData)}
                             />
                     </List>
+                    <ComponentList />
                 </Drawer>
             </div>
         )
