@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Drawer from 'material-ui/Drawer'
-import MenuItem from 'material-ui/MenuItem'
-import {List, ListItem} from 'material-ui/List';
+import {List, ListItem,makeSelectable} from 'material-ui/List';
 import RaisedButton from 'material-ui/RaisedButton'
 import Introduction from './Introduction.js'
 import ExaptiveComponents from './ExaptiveComponents.js'
@@ -13,17 +12,32 @@ import ContentDrafts from 'material-ui/svg-icons/content/drafts';
 import ContentInfo from 'material-ui/svg-icons/action/info';
 import axios from 'axios';
 import ComponentList from './ComponentList'
+let SelectableList = makeSelectable(List);
 
 class Display extends Component {
 
     constructor(props){
         super(props);
-        this.state = {open: true};
+        this.state = {
+            open: false,
+            selectedIndex: 0
+
+        };
         console.log("I am in display constructor.");
         console.log(props.xapsBase);
     }
 
-    handleToggle = () => this.setState({open: !this.state.open})
+
+    handleToggle = () => this.setState({open: !this.state.open});
+
+    
+
+    handleRequestChange (event, index) {
+        console.log("Selected index is: ",index);
+    this.setState({
+        selectedIndex: index
+    })
+    }
 
     componentDidMount() {
         console.log("I am in display.");
@@ -45,24 +59,24 @@ class Display extends Component {
         this.setState({compData: res.data});
         console.log("compData fetched");
         console.log(this.state.compData);
-      }      
+      }     
       renderComponentList(data){
         if(data){
         return data.dependencies.component.map(d => {
           const parsed = JSON.parse(d.class)
           const to = `/mycomponent/${parsed.uuid}`
-          console.log("parsed info:");
-          console.log(parsed);
           return (
                 <ListItem
-                  key={parsed.uuid}
                   primaryText={ <Link to={to}> {parsed.uuid} </Link> }
+                  value={parsed.uuid}
                   leftIcon={<ActionGrade />}
                 />
                 )
                 })
             }
         }
+
+
     render () {
         return (
             <div>
@@ -70,12 +84,19 @@ class Display extends Component {
                     label="Exaptive"
                     onClick={this.handleToggle}
                 />
-                <Drawer open={this.state.open}>
+                <Drawer 
+                    docked={false}
+                    open={this.state.open}
+                    onRequestChange={(open) => this.setState({open})}
+                    >
                       <h1> {this.state.data && this.state.data.name} </h1>
-                    <List>
-                        <ListItem primaryText="Introduction" leftIcon={<ContentInfo />} />
+                    <SelectableList value={this.state.selectedIndex} onChange={this.handleRequestChange.bind(this)}>
+                        <ListItem value={0}
+                            primaryText = {<Link to="/Introduction"> Introduction </Link>}
+                            leftIcon={<ContentInfo />} />
                         <ListItem
-                            primaryText="Components"
+                            primaryText = {<Link to="/ExaptiveComponents"> Components </Link>}
+                            value={1}
                             leftIcon={<ContentInbox />}
                             initiallyOpen={true}
                             primaryTogglesNestedList={true}
@@ -84,15 +105,20 @@ class Display extends Component {
                             nestedItems={<ComponentList />}
                             />
                         <ListItem
-                            primaryText="Xaps"
+                            primaryText = {<Link to="/Xaps"> Xaps </Link>}
+                            value={2}
                             leftIcon={<ContentInbox />}
                             initiallyOpen={true}
                             primaryTogglesNestedList={true}
                             //render xaps here..don't have the the right apis yet.
                             nestedItems={this.renderComponentList(this.state.xapData)}
                             />
+<<<<<<< HEAD
                     </List>
                     <ComponentList />
+=======
+                    </SelectableList>
+>>>>>>> b1608324f202240399f7ebc8f0888d6704e01be7
                 </Drawer>
             </div>
         )

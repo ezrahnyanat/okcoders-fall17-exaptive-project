@@ -7,10 +7,21 @@ class ExaptiveComponent extends Component {
     this.state = {}
     console.log(props)
   }
-
+  componentDidUpdate(prevProps,prevState){
+    const id = this.props.match.params.id
+    if(id!== prevProps.match.params.id){
+    	const url = `${this.props.componentBase}/${id}/spec.json`
+    	axios
+      	.get(url)
+      	.then(this.successAjaxHandler)  	
+	}
+  }
   componentDidMount() {
     const id = this.props.match.params.id
+    console.log("id is:");
+    console.log(id);    
     const url = `${this.props.componentBase}/${id}/spec.json`
+
     axios
       .get(url)
       .then(this.successAjaxHandler)
@@ -27,20 +38,22 @@ class ExaptiveComponent extends Component {
         <div>
         <h1>{data.name}</h1>
         <h4>{data.description}</h4>
-        {this.renderTags(data.tags)}
         </div>
       )
     }
   }
 
-  renderTags(tags) {
-    return tags.map(t => (<h5>{t}</h5>))
-  }
+//  renderTags(tags) {
+  	//var i = 0;
+    //return tags.map(function(t) {
+  //	 return (<h5>{t}</h5>)
+//	});
+  //}
+
 
   render() {
     return (
       <div>
-      <h1> Component Data </h1>
       {this.renderComponentData(this.state.data)}
       </div>
     )

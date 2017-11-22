@@ -5,6 +5,9 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter as Router } from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+var injectTapEventPlugin = require("react-tap-event-plugin"); 
+injectTapEventPlugin();
+
 
 ReactDOM.render(
     (

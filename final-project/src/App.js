@@ -11,7 +11,8 @@ class App extends Component {
     super(props)
     this.state = {
       xapsBase: "https://exaptive.city/api/v1/xaps/efa507b0-76f3-11e7-a0fe-d7ef23f2c0f6/spec.json",
-      componentBase: "https://exaptive.city/api/v1/components/"
+      componentBase: "https://exaptive.city/api/v1/components/",
+      selectedIndex: 0
     }
   }	
   render() {
