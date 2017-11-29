@@ -4,6 +4,7 @@ import { List, ListItem, makeSelectable } from 'material-ui/List';
 import ExapComponents from './ExapComponents.json';
 import { GetComponents } from './XapComponentService'
 import { Link } from 'react-router-dom'
+import ActionHome from 'material-ui/svg-icons/action/home';
 
 let SelectableList = makeSelectable(List)
 
@@ -69,7 +70,8 @@ class ComponentList extends Component {
             const to = `/mycomponent/${i.UUID}`
             return (
                 <ListItem
-                    value={i} 
+                    value={i}
+                    leftIcon={<img src="https://s3.amazonaws.com/content.exaptive.com/component.jpg"/>} 
                     primaryText={ <Link to={to}> {i.Name} </Link> }
                     secondaryText={i.Category}
                 />

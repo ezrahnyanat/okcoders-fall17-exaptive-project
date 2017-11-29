@@ -20,7 +20,8 @@ class App extends Component {
       <div>
         <Display {...this.state}/>
         <Switch>
-            <Route exact path="/Introduction/" component={Introduction} />
+            <Route exact path="/" component={Introduction} />
+            <Route exact path="/Introduction" component={Introduction} />
 	        <Route path="/mycomponent/:id" render={(props) => (
 	          <ExaptiveComponents {...this.state} {...props}/>
 	        )} />

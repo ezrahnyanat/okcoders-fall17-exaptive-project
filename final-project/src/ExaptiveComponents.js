@@ -36,20 +36,25 @@ class ExaptiveComponent extends Component {
   }
 
   renderComponentData(data) {
+    console.log("data", data)
     const Converter = require('react-showdown').Converter;
     const converter = new Converter();
     const style = {
-      paddingLeft: 225,
-      paddingRight: 225
+      paddingLeft: 250,
+      paddingRight: 60
     }
     if (data) {
       return (
         <div style={style}>
         <h1>{data.name}</h1>
-        <h4>{converter.convert(data.description)}</h4>
+        <h4>{converter.convert(this.fixIframeReference(data.description))}</h4>
         </div>
       )
     }
+  }
+
+  fixIframeReference(desc) {
+    return desc.replace("<iframe src=\"/", "<iframe src=\"https://exaptive.city/api/v1/")
   }
 
 //  renderTags(tags) {

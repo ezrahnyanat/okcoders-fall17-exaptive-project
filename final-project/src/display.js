@@ -55,6 +55,7 @@ class Display extends Component {
         console.log("compData fetched");
         console.log(this.state.compData);
       }     
+
       renderComponentList(data){
         if(data){
         return data.dependencies.component.map(d => {
@@ -64,7 +65,6 @@ class Display extends Component {
                 <ListItem
                   primaryText={ <Link to={to}> {parsed.uuid} </Link> }
                   value={parsed.uuid}
-                  leftIcon={<ActionGrade />}
                 />
                 )
                 })
@@ -79,21 +79,21 @@ class Display extends Component {
                     style={{backgroundColor: '#052334'}}
                 />
                 <Drawer 
-                    width={200}
                     docked={false}
                     open={this.state.open}
                     onRequestChange={(open) => this.setState({open})}
                     >
                       <h1> {this.state.data && this.state.data.name} </h1>
                     <SelectableList value={this.state.selectedIndex} onChange={this.handleRequestChange.bind(this)}>
-                        <ListItem value={0}
+                        <ListItem 
+                            value={0}
                             primaryText = {<Link to="/Introduction"> Introduction </Link>}
                             leftIcon={<ContentInfo />} />
                         <ListItem
                             primaryText = {<Link to="/ExaptiveComponents"> Components </Link>}
                             value={1}
-                            leftIcon={<ContentInbox />}
-                            initiallyOpen={true}
+                            leftIcon={<img src="https://s3.amazonaws.com/content.exaptive.com/component.jpg"/>} 
+                            initiallyOpen={false}
                             primaryTogglesNestedList={true}
                             //render components here..don't have the the right apis yet.                            
                             nestedItems={[<ComponentList />]}
@@ -102,7 +102,7 @@ class Display extends Component {
                             primaryText = {<Link to="/Xaps"> Xaps </Link>}
                             value={2}
                             leftIcon={<ContentInbox />}
-                            initiallyOpen={true}
+                            initiallyOpen={false}
                             primaryTogglesNestedList={true}
                             //render xaps here..don't have the the right apis yet.
                             nestedItems={this.renderComponentList(this.state.xapData)}
