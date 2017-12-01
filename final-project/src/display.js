@@ -24,8 +24,8 @@ class Display extends Component {
             open: false,
             selectedIndex: 0
         };
-        console.log("I am in display constructor.");
-        console.log(props.xapsBase);
+        // console.log("I am in display constructor.");
+        // console.log(props.xapsBase);
     }
     handleToggle = () => this.setState({open: !this.state.open});
     

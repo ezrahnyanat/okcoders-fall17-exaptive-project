@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { List, ListItem, makeSelectable } from 'material-ui/List'; 
 import ExapComponents from './ExapComponents.json';
-import { GetComponents } from './XapComponentService'
+// import { GetComponents } from './XapComponentService'
 import { Link } from 'react-router-dom'
 import ActionHome from 'material-ui/svg-icons/action/home';
+import axios from'axios';
 
 let SelectableList = makeSelectable(List)
 
@@ -46,18 +47,27 @@ SelectableList = wrapState(SelectableList);
 class ComponentList extends Component {
     constructor(props) {
         super(props)
-        this.state = {}
+        this.state = {
+            components: []
+        }
     }
 
     componentDidMount() {
-        GetComponents((data) => {
-            this.setState({
-                data: data
-            })
-        })
+        axios
+            .get('https://api.myjson.com/bins/1cvj17')
+            .then((res) => this.GetComponents(res.data))
+            .catch(err => this.handleErrors(err))
     }
 
-    renderListItems =(data) => {
+    GetComponents = (data) => {
+        this.setState({
+            components: data
+        })
+        console.log(this.state.components);
+        
+    }
+
+    renderListItems = (data) => {
         return (
             <SelectableList>
                 {this.makeComponentList(data)}
@@ -66,15 +76,17 @@ class ComponentList extends Component {
     }
 
     makeComponentList = (data) => {
-        return ExapComponents.map(i => {
-            const to = `/mycomponent/${i.UUID}`
+        return data.map(i => {
+            const to = `/mycomponent/${i.uuid}`
             return (
-                <ListItem
-                    value={i}
-                    leftIcon={<img src="https://s3.amazonaws.com/content.exaptive.com/component.jpg"/>} 
-                    primaryText={ <Link to={to}> {i.Name} </Link> }
-                    secondaryText={i.Category}
-                />
+                <Link to={to}>
+                    <ListItem
+                        value={i}
+                        leftIcon={<img src="https://s3.amazonaws.com/content.exaptive.com/component.jpg"/>} 
+                        primaryText={ i.uuid }
+                        // secondaryText={i.Category}
+                    />
+                </Link>
             )
         })
     }
@@ -83,7 +95,7 @@ class ComponentList extends Component {
     render() {
         return (
             <div>
-                {this.state.data && this.renderListItems(this.state.data)}
+                {this.state.components && this.renderListItems(this.state.components)}
             </div>
         )
     }
