@@ -14,6 +14,7 @@ import ContentInfo from 'material-ui/svg-icons/action/info';
 import axios from 'axios';
 import GetComponents from './XapComponentService'
 import ComponentList from './ComponentList'
+import ComponentFilter from './ComponentFilter.js'
 
 let SelectableList = makeSelectable(List);
 
@@ -90,13 +91,13 @@ class Display extends Component {
                             primaryText = {<Link to="/Introduction"> Introduction </Link>}
                             leftIcon={<ContentInfo />} />
                         <ListItem
-                            primaryText = {<Link to="/ExaptiveComponents"> Components </Link>}
+                            primaryText = {<Link to="/ComponentFilter"> Components </Link>}
                             value={1}
                             leftIcon={<img src="https://s3.amazonaws.com/content.exaptive.com/component.jpg"/>} 
                             initiallyOpen={false}
                             primaryTogglesNestedList={true}
                             //render components here..don't have the the right apis yet.                            
-                            nestedItems={[<ComponentList />]}
+                            //nestedItems={[<ComponentList />]}
                             />
                         <ListItem
                             primaryText = {<Link to="/Xaps"> Xaps </Link>}

@@ -54,7 +54,7 @@ class ComponentList extends Component {
 
     componentDidMount() {
         axios
-            .get('https://api.myjson.com/bins/1cvj17')
+            .get('https://api.myjson.com/bins/rsf3n')
             .then((res) => this.GetComponents(res.data))
             .catch(err => this.handleErrors(err))
     }
@@ -77,13 +77,13 @@ class ComponentList extends Component {
 
     makeComponentList = (data) => {
         return data.map(i => {
-            const to = `/mycomponent/${i.uuid}`
+            const to = `/mycomponent/${i.UUID}`
             return (
                 <Link to={to}>
                     <ListItem
                         value={i}
                         leftIcon={<img src="https://s3.amazonaws.com/content.exaptive.com/component.jpg"/>} 
-                        primaryText={ i.uuid }
+                        primaryText={ i.UUID.Name }
                         // secondaryText={i.Category}
                     />
                 </Link>
