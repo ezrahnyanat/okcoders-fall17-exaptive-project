@@ -4,15 +4,15 @@ import Display from './display.js'
 import Introduction from './Introduction.js'
 import ExaptiveComponents from './ExaptiveComponents.js'
 import Xaps from './Xaps.js'
-import { Route, Switch, Link } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import ComponentFilter from './ComponentFilter.js'
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      xapsBase: "https://exaptive.city/api/v1/xaps/efa507b0-76f3-11e7-a0fe-d7ef23f2c0f6/spec.json",
-      componentBase: "https://exaptive.city/api/v1/components/",
+      xapsBase: "https://www.exaptive.city/api/v1/xaps/",
+      componentBase: "https://www.exaptive.city/api/v1/components/",
       selectedIndex: 0
     }
   }	
@@ -24,7 +24,10 @@ class App extends Component {
             <Route exact path="/" component={Introduction} />
             <Route exact path="/Introduction" component={Introduction} />
             <Route exact path="/ComponentFilter" component={ComponentFilter} />
-	          <Route path="/xap/:id" render={(props) => (
+            <Route exact path="/mycomponent/:id" render={(props) => (
+              <ExaptiveComponents {...this.state} {...props} />
+             )} />	
+	          <Route exact path="/xap/:id" render={(props) => (
 	            <Xaps {...this.state} {...props}/>
 	            )} />	        
         </Switch>         

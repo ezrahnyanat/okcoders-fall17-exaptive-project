@@ -2,19 +2,11 @@ import React, { Component } from 'react'
 import AppBar from 'material-ui/AppBar'
 import Drawer from 'material-ui/Drawer'
 import {List, ListItem,makeSelectable} from 'material-ui/List';
-import RaisedButton from 'material-ui/RaisedButton'
-import Introduction from './Introduction.js'
-import ExaptiveComponents from './ExaptiveComponents.js'
-import Xaps from './Xaps.js'
-import { Route, Switch, Link } from 'react-router-dom'
-import ActionGrade from 'material-ui/svg-icons/action/grade';
+import { Link } from 'react-router-dom'
 import ContentInbox from 'material-ui/svg-icons/content/inbox';
-import ContentDrafts from 'material-ui/svg-icons/content/drafts';
 import ContentInfo from 'material-ui/svg-icons/action/info';
 import axios from 'axios';
-import GetComponents from './XapComponentService'
-import ComponentList from './ComponentList'
-import ComponentFilter from './ComponentFilter.js'
+
 
 let SelectableList = makeSelectable(List);
 

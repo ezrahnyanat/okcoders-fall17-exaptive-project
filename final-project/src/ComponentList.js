@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { List, ListItem, makeSelectable } from 'material-ui/List'; 
-import ExapComponents from './ExapComponents.json';
-// import { GetComponents } from './XapComponentService'
 import { Link } from 'react-router-dom'
-import ActionHome from 'material-ui/svg-icons/action/home';
 import axios from'axios';
+import { filter } from 'lodash'
 
 let SelectableList = makeSelectable(List)
 
@@ -60,11 +58,26 @@ class ComponentList extends Component {
     }
 
     GetComponents = (data) => {
+        const filtered = this.filterForCategory(data)
+        const isActive = this.filterForActive(filtered)
         this.setState({
-            components: data
+            components: isActive
         })
         console.log(this.state.components);
         
+    }
+
+    filterForCategory(data) {
+        this.props.categoryFilter
+        if (this.props.categoryFilter){
+            return filter(data, {'Category': this.props.categoryFilter})          
+        } else {
+            return data
+        }
+    }
+
+    filterForActive(filtered) {
+        return filter(filtered, {'is_active': true })
     }
 
     renderListItems = (data) => {
@@ -83,7 +96,7 @@ class ComponentList extends Component {
                     <ListItem
                         value={i}
                         leftIcon={<img src="https://s3.amazonaws.com/content.exaptive.com/component.jpg"/>} 
-                        primaryText={ i.UUID.Name }
+                        primaryText={ i.Name }
                         // secondaryText={i.Category}
                     />
                 </Link>

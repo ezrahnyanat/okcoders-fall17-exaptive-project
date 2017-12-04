@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import { Markdown } from 'react-showdown'
+import 'react-showdown'
 
 class ExaptiveComponent extends Component {
   constructor(props) {
@@ -23,6 +23,7 @@ class ExaptiveComponent extends Component {
     const id = this.props.match.params.id
     console.log("id is:");
     console.log(id);    
+    console.log(this.props.componentBase)
     const url = `${this.props.componentBase}/${id}/spec.json`
 
     axios

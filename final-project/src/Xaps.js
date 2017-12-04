@@ -1,38 +1,65 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import Table from 'material-ui/Table';
-import {Link} from 'react-router-dom'
-
+import axios from 'axios'
+import 'react-showdown'
 
 class Xaps extends Component {
-    constructor(props) {
-        super(props)
-        this.state= {
-            xapUrl: "https://cognet.exaptive.city/api/v1/suggestions/components/fc9dec70-38ab-11e6-acbd-475d4429cea6?reload=false&city=exaptive.city"
-        }
+  constructor(props) {
+    super(props)
+    this.state = {
+        xaps:[]
     }
+    console.log(props)
+  }
 
-componentDidMount() {
+  componentDidMount() {
     axios
-        .get(this.props.xapUrl)
-        .then(this.successAjaxHandler)
-    }
+      .get('https://api.myjson.com/bins/19u04r')
+      .then(this.successAjaxHandler)
+      .catch(err => this.handleErrors(err))
+  }
 
-successAjaxHandler = (res) => {
+  successAjaxHandler = (res) => {
+    console.log("data", res.data)
     this.setState({data: res.data})
-    }
+  }
 
-    render () {
-        return (
-            <div>
-                <h1> Xaps </h1>
-                <h2> {this.state.data && this.state.data.name} </h2>
-            </div>
-        )
+  renderXapsData(data) {
+    console.log("data", data)
+    const Converter = require('react-showdown').Converter;
+    const converter = new Converter();
+    const style = {
+      paddingLeft: 250,
+      paddingRight: 60
     }
+    if (data) {
+      return (
+        <div style={style}>
+        <h1>{data.name}</h1>
+        <h4>{converter.convert(this.fixIframeReference(data.description))}</h4>
+        </div>
+      )
+    }
+  }
 
+  fixIframeReference(desc) {
+    return desc.replace("<iframe src=\"/", "<iframe src=\"https://exaptive.city/api/v1/")
+  }
+
+//  renderTags(tags) {
+  	//var i = 0;
+    //return tags.map(function(t) {
+  //	 return (<h5>{t}</h5>)
+//	});
+  //}
+
+
+  render() {
+    return (
+      <div>
+      {this.renderXapsData(this.state.data)}
+      </div>
+    )
+  }
 }
-
-
 
 export default Xaps
