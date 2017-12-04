@@ -23,21 +23,31 @@ class Introduction extends Component {
         console.log(this.state.welcome)
     }
 
+    renderIntroSection = (data) => {
+        return(
+            <div>
+                {this.renderIntroData(data)}
+            </div>
+        )
+    }
+
     renderIntroData(welcome) {
         if(welcome) {
-            return (
-                <div>
-                <h1>{welcome.title}</h1>
-                <h4>{welcome.description}</h4>
-                </div>
-            )
+            return welcome.map(i => {
+                return (
+                    <div>
+                        <h1>{i.title}</h1>
+                        <p>{i.description}</p>
+                    </div>
+                )
+            })
         }
     }
 
     render () {
         return (
             <div>
-            {this.renderIntroData(this.state.welcome)}
+            {this.state.welcome && this.renderIntroData(this.state.welcome)}
             </div>
         )
     }

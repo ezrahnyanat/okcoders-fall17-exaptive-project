@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import 'react-showdown'
+import { ListItem } from 'material-ui/List'; 
 
 class Xaps extends Component {
   constructor(props) {
     super(props)
     this.state = {
-        xaps:[]
+      xapData:[]
     }
     console.log(props)
   }
@@ -20,43 +21,36 @@ class Xaps extends Component {
 
   successAjaxHandler = (res) => {
     console.log("data", res.data)
-    this.setState({data: res.data})
+    this.setState({xapData: res.data})
   }
 
-  renderXapsData(data) {
-    console.log("data", data)
-    const Converter = require('react-showdown').Converter;
-    const converter = new Converter();
-    const style = {
-      paddingLeft: 250,
-      paddingRight: 60
-    }
-    if (data) {
-      return (
-        <div style={style}>
-        <h1>{data.name}</h1>
-        <h4>{converter.convert(this.fixIframeReference(data.description))}</h4>
+  renderXapsData = (data) => {
+    return (
+      <div>
+        {this.renderXaps(data)}
+      </div>
+    )
+  }
+
+  renderXaps(data) {
+    return data.map(i => {
+      return(
+        <div>
+          <ListItem
+            value={i}
+            leftIcon={<img src="https://s3.amazonaws.com/content.exaptive.com/component.jpg"/>} 
+            primaryText={'UUID is ' + i.uuid }
+            secondaryText={'is Active? ' + i.is_active.toString()}
+          />
         </div>
       )
-    }
+    })
   }
-
-  fixIframeReference(desc) {
-    return desc.replace("<iframe src=\"/", "<iframe src=\"https://exaptive.city/api/v1/")
-  }
-
-//  renderTags(tags) {
-  	//var i = 0;
-    //return tags.map(function(t) {
-  //	 return (<h5>{t}</h5>)
-//	});
-  //}
-
-
+  
   render() {
     return (
       <div>
-      {this.renderXapsData(this.state.data)}
+      {this.state.xapData && this.renderXapsData(this.state.xapData)}
       </div>
     )
   }

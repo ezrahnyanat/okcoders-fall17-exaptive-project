@@ -26,10 +26,13 @@ class App extends Component {
             <Route exact path="/ComponentFilter" component={ComponentFilter} />
             <Route exact path="/mycomponent/:id" render={(props) => (
               <ExaptiveComponents {...this.state} {...props} />
-             )} />	
-	          <Route exact path="/xap/:id" render={(props) => (
+            )} />
+            <Route exact path="/xaps/" render={(props) => (
 	            <Xaps {...this.state} {...props}/>
-	            )} />	        
+            )} /> 
+	          {/* <Route exact path="/xap/:id" render={(props) => (
+	            <Xaps {...this.state} {...props}/>
+	            )} />	         */}
         </Switch>         
       </div>
     );
