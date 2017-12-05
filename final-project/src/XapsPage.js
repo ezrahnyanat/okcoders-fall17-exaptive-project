@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import 'react-showdown'
 
-class ExaptiveComponent extends Component {
+class XapsPage extends Component {
   constructor(props) {
     super(props)
     this.state = {}
@@ -12,7 +12,7 @@ class ExaptiveComponent extends Component {
   componentDidUpdate(prevProps,prevState){
     const id = this.props.match.params.id
     if(id!== prevProps.match.params.id){
-    	const url = `${this.props.componentBase}/${id}/spec.json`
+    	const url = `${this.props.xapsBase}/${id}/spec.json`
     	axios
       	.get(url)
       	.then(this.successAjaxHandler)  	
@@ -23,8 +23,8 @@ class ExaptiveComponent extends Component {
     const id = this.props.match.params.id
     console.log("id is:");
     console.log(id);    
-    console.log(this.props.componentBase)
-    const url = `${this.props.componentBase}/${id}/spec.json`
+    console.log(this.props.xapsBase)
+    const url = `${this.props.xapsBase}/${id}/spec.json`
 
     axios
       .get(url)
@@ -36,7 +36,7 @@ class ExaptiveComponent extends Component {
     this.setState({data: res.data})
   }
 
-  renderComponentData(data) {
+  renderXapsData(data) {
     console.log("data", data)
     const Converter = require('react-showdown').Converter;
     const converter = new Converter();
@@ -48,6 +48,7 @@ class ExaptiveComponent extends Component {
       return (
         <div style={style}>
         <h1>{data.name}</h1>
+        <h1>{<img src={data.image} />}</h1>
         <h4>Description: {converter.convert(this.fixIframeReference(data.description))}</h4>
         </div>
       )
@@ -69,10 +70,10 @@ class ExaptiveComponent extends Component {
   render() {
     return (
       <div>
-      {this.renderComponentData(this.state.data)}
+      {this.renderXapsData(this.state.data)}
       </div>
     )
   }
 }
 
-export default ExaptiveComponent
+export default XapsPage

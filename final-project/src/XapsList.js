@@ -7,7 +7,7 @@ import { filter } from 'lodash'
 
 let SelectableList = makeSelectable(List)
 
-function wrapState(ComposedComponent) {
+function wrapState(ComposedXaps) {
     return class SelectableList extends Component {
       static propTypes = {
         children: PropTypes.node.isRequired,
@@ -28,12 +28,12 @@ function wrapState(ComposedComponent) {
   
       render() {
         return (
-          <ComposedComponent
+          <ComposedXaps
             value={this.state.selectedIndex}
             onChange={this.handleRequestChange}
           >
             {this.props.children}
-          </ComposedComponent>
+          </ComposedXaps>
         );
       }
     };
@@ -42,28 +42,28 @@ function wrapState(ComposedComponent) {
 
 SelectableList = wrapState(SelectableList);
 
-class ComponentList extends Component {
+class XapsList extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            components: []
+            xaps: []
         }
     }
 
     componentDidMount() {
         axios
-            .get('https://api.myjson.com/bins/rsf3n')
-            .then((res) => this.GetComponents(res.data))
+            .get('https://api.myjson.com/bins/19u04r')
+            .then((res) => this.GetXaps(res.data))
             .catch(err => this.handleErrors(err))
     }
 
-    GetComponents = (data) => {
+    GetXaps = (data) => {
         const filtered = this.filterForCategory(data)
         const isActive = this.filterForActive(filtered)
         this.setState({
-            components: isActive
+            xaps: isActive
         })
-        console.log(this.state.components);
+        console.log(this.state.xaps);
         
     }
 
@@ -83,20 +83,22 @@ class ComponentList extends Component {
     renderListItems = (data) => {
         return (
             <SelectableList>
-                {this.makeComponentList(data)}
+                {this.makeXapsList(data)}
             </SelectableList>
         )
     }
 
-    makeComponentList = (data) => {
+    makeXapsList = (data) => {
         return data.map(i => {
-            const to = `/mycomponent/${i.UUID}`
+            const to = `/myxap/${i.uuid}`
             return (
                 <Link to={to}>
                     <ListItem
                         value={i}
-                        leftIcon={<img src="https://s3.amazonaws.com/content.exaptive.com/component.jpg"/>} 
-                        primaryText={ i.Name }/>
+                        //leftIcon={<img src="https://s3.amazonaws.com/content.exaptive.com/component.jpg"/>} 
+                        primaryText={ i.uuid }
+                        // secondaryText={i.Category}
+                    />
                 </Link>
             )
         })
@@ -106,10 +108,10 @@ class ComponentList extends Component {
     render() {
         return (
             <div>
-                {this.state.components && this.renderListItems(this.state.components)}
+                {this.state.xaps && this.renderListItems(this.state.xaps)}
             </div>
         )
     }
 }
 
-export default ComponentList
+export default XapsList

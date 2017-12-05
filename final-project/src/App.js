@@ -6,6 +6,8 @@ import ExaptiveComponents from './ExaptiveComponents.js'
 import Xaps from './Xaps.js'
 import { Route, Switch } from 'react-router-dom'
 import ComponentFilter from './ComponentFilter.js'
+import XapsPage from './XapsPage.js'
+import XapsList from './XapsList.js'
 
 class App extends Component {
   constructor(props) {
@@ -27,12 +29,10 @@ class App extends Component {
             <Route exact path="/mycomponent/:id" render={(props) => (
               <ExaptiveComponents {...this.state} {...props} />
             )} />
-            <Route exact path="/xaps/" render={(props) => (
-	            <Xaps {...this.state} {...props}/>
-            )} /> 
-	          {/* <Route exact path="/xap/:id" render={(props) => (
-	            <Xaps {...this.state} {...props}/>
-	            )} />	         */}
+            <Route exact path="/XapsList" component={XapsList} />
+	          <Route exact path="/myxap/:id" render={(props) => (
+	            <XapsPage {...this.state} {...props}/>
+	            )} />	         
         </Switch>         
       </div>
     );

@@ -92,13 +92,13 @@ class Display extends Component {
                             //nestedItems={[<ComponentList />]}
                             />
                         <ListItem
-                            primaryText = {<Link to="/Xaps"> Xaps </Link>}
+                            primaryText = {<Link to="/XapsList"> Xaps </Link>}
                             value={2}
                             leftIcon={<ContentInbox />}
                             initiallyOpen={false}
                             primaryTogglesNestedList={true}
                             //render xaps here..don't have the the right apis yet.
-                            nestedItems={this.renderComponentList(this.state.xapData)}
+                            //nestedItems={this.renderComponentList(this.state.xapData)}
                             />
                     </SelectableList>
                 </Drawer>

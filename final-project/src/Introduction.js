@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios'
+import 'react-showdown'
+
 
 class Introduction extends Component {
     constructor(props) {
@@ -32,12 +34,14 @@ class Introduction extends Component {
     }
 
     renderIntroData(welcome) {
+        const Converter = require('react-showdown').Converter;
+        const converter = new Converter();
         if(welcome) {
             return welcome.map(i => {
                 return (
                     <div>
-                        <h1>{i.title}</h1>
-                        <p>{i.description}</p>
+                        <h1>{converter.convert(i.title)}</h1>
+                        <p>{converter.convert(i.description)}</p>
                     </div>
                 )
             })
@@ -46,7 +50,7 @@ class Introduction extends Component {
 
     render () {
         return (
-            <div>
+            <div  style={{textAlign:'center'}}>
             {this.state.welcome && this.renderIntroData(this.state.welcome)}
             </div>
         )
