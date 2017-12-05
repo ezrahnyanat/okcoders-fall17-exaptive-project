@@ -9,8 +9,8 @@ import Toggle from 'material-ui/Toggle';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import Drawer from 'material-ui/Drawer';
-import { Route, Switch, Link } from 'react-router-dom'
-import Pages from './pages.js';
+import { Route, Switch, Link,BrowserRouter } from 'react-router-dom'
+import {Pages, MyEditor} from './pages.js';
 import xcomponents from './xcomponents.js';
 import xaps from './xaps.js';
 
@@ -22,12 +22,19 @@ handleToggle = () => this.setState({open: !this.state.open});
 
   render() {
     return (
+      <BrowserRouter>
         <MuiThemeProvider>
         <div>
         <Switch>
             <Route exact path="/pages/" component={Pages}/>
             <Route exact path="/xcomponents/" component={xcomponents} />
-            <Route exact path="/xaps/" component={xaps} />            
+            <Route exact path="/xaps/" component={xaps} />
+            <Route path="/pages/edit/:id" render={(props) => (
+              <MyEditor {...this.state} {...props}/>
+            )} />
+            <Route path="/pages/new" render={(props) => (
+              <MyEditor {...this.state} {...props}/>
+            )} />                        
         </Switch> 
         <AppBar style={{ position: 'fixed', top: 0 }}
           title="Administration of Documentation Page"
@@ -46,11 +53,14 @@ handleToggle = () => this.setState({open: !this.state.open});
             primaryText = {<Link to="/xcomponents"> Components </Link>}>
             </MenuItem>
             <MenuItem 
-            primaryText = {<Link to="/xaps"> Xaps </Link>}>
+            disabled={true}
+            primaryText = "Xaps">
+
             </MenuItem>            
         </Drawer>
         </div>
       </MuiThemeProvider>
+      </BrowserRouter>
     );
   }
 }

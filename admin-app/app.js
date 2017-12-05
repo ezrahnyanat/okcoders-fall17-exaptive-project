@@ -45,9 +45,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
-app.use('/static', static);
+app.get('/static/:static_id', static.get);
+app.get('/static', static.read);
+app.post('/static', static.create);
+app.put('/static/:static_id', static.edit);
+app.delete('/static/:static_id', static.delete);
 app.use('/xcomponents', xcomponents);
+app.get('/xcomponents/fetch', xcomponents.fetch);
+app.get('/xcomponents', xcomponents.read);
+app.put('/xcomponents/:xcomponent_id/:is_active', xcomponents.edit);
 app.use('/xaps', xaps);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

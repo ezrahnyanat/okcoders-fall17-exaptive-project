@@ -10,6 +10,7 @@ import {
 } from 'material-ui/Table';
 import TextField from 'material-ui/TextField';
 import Toggle from 'material-ui/Toggle';
+import axios from 'axios';
 
 const styles = {
   propContainer: {
@@ -22,41 +23,51 @@ const styles = {
   },
 };
 
-const tableData = [
-  {
-    name: '94319090-72db-11e7-82e5-cffcac45a5bb',
-    status: 'Employed',
-  },
-  {
-    name: '94319090-72db-11e7-82e5-cffcac45a5bb',
-    status: 'Unemployed',
-  },
-  {
-    name: '94319090-72db-11e7-82e5-cffcac45a5bb',
-    status: 'Employed',
-  },
-  {
-    name: '94319090-72db-11e7-82e5-cffcac45a5bb',
-    status: 'Employed',
-  },
-  {
-    name: '94319090-72db-11e7-82e5-cffcac45a5bb',
-    status: 'Employed',
-  },
-  {
-    name: '94319090-72db-11e7-82e5-cffcac45a5bb',
-    status: 'Employed',
-  },
-  {
-    name: '94319090-72db-11e7-82e5-cffcac45a5bb',
-    status: 'Employed',
-  },
-];
+ class ToggleComp extends Component{
+  constructor(props){
+    super(props);
+    this.state={
+      toggled: true
+    }
+  }
+    handleToggle = (event) => {
 
-/**
- * A more complex example, allowing the table height to be set, and key boolean properties to be toggled.
- */
+      console.log(this.props);
+      //do a put request here for the id.
+      const url = `${this.props.url}/${this.props.id}/${!this.state.toggled}`;
+      console.log(url);
+      this.setState({toggled: !this.state.toggled});
+      const content = {
+      }
+      axios
+      .put(url,content)
+      .then(this.successAjaxHandler);
+
+  };
+  successAjaxHandler = (res)=> {
+    console.log(res.data);
+  }
+
+  componentDidMount(props){
+    this.setState({toggled: this.props.isActive});
+  }
+
+  render(){
+    return(
+        <Toggle 
+        toggled={this.state.toggled} 
+        onToggle={this.handleToggle} 
+        />
+      )
+  }
+ }
 export default class TableComp extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      data:[]
+    };
+  }
   state = {
     fixedHeader: true,
     fixedFooter: true,
@@ -70,17 +81,52 @@ export default class TableComp extends Component {
     height: '300px',
   };
 
-  handleToggle = (event, toggled) => {
-    this.setState({
-      [event.target.name]: toggled,
-    });
-  };
-
   handleChange = (event) => {
     this.setState({height: event.target.value});
   };
 
+  isEmpty = (obj)=> {
+    for(var prop in obj) {
+        if(obj.hasOwnProperty(prop))
+            return false;
+    }
+    return JSON.stringify(obj) === JSON.stringify({});
+  };
+
+  renderTableBody(){
+    console.log("I a in renderTableBody");
+    const d = this.state.data;
+    console.log(d);
+    if(!this.isEmpty(d)){
+      return(
+      d.map( (row, index) => {
+        return(
+        <TableRow key={index}>
+          <TableRowColumn><div>{row.name}</div></TableRowColumn>
+          <TableRowColumn><div>
+            <ToggleComp isActive={row.is_active} id={row._id} url={this.props.url}/>
+          </div></TableRowColumn>
+        </TableRow>
+        )}
+        ))
+    }
+  }
+  componentDidMount(){
+    console.log(" I am in the componentDidMount")
+    const url = `${this.props.url}`
+    axios
+      .get(url)
+      .then(this.successAjaxHandler)
+  }
+
+  successAjaxHandler = (res) => {
+    console.log("data from TableAjax", res.data)
+    this.setState({
+      data: res.data
+    })
+  };
   render() {
+    console.log(this.props);
     return (
       <div>
         <Table
@@ -111,12 +157,7 @@ export default class TableComp extends Component {
             showRowHover={this.state.showRowHover}
             stripedRows={this.state.stripedRows}
           >
-            {tableData.map( (row, index) => (
-              <TableRow key={index}>
-                <TableRowColumn>{row.name}</TableRowColumn>
-                <TableRowColumn><Toggle/></TableRowColumn>
-              </TableRow>
-              ))}
+          {this.renderTableBody()}
           </TableBody>
           <TableFooter
             adjustForCheckbox={this.state.showCheckboxes}
@@ -127,7 +168,6 @@ export default class TableComp extends Component {
             </TableRow>
           </TableFooter>
         </Table>
-
         <div style={styles.propContainer}>
         </div>
       </div>
