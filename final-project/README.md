@@ -1,7 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app) as part of the Fall 2017 Intermediate Front End class with [OKCoders](http://okcoders.com/). 
 
-It should give you a high-level view of Exaptive's standard set of components and Xaps.
+The project was provided by [Exaptive](https://www.exaptive.com/), a software platform to help people build data apps. 
 
-The Admin tool allows you to....
-
-The display application allows you to find components and Xaps. 
+What we built is essentially a documentation page to give a high-level view of Exaptive's standard set of components and Xaps.
