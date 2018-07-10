@@ -1,0 +1,1045 @@
+[
+	{
+		"UUID": "50129fb0-2298-11e6-a584-ff06a142b619",
+		"Name": "Scatterplot",
+		"Status": "2",
+		"Package": "Standard Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "c9ef5aa0-6a30-11e6-b3c5-bbb74f5ad143",
+		"Name": "Pie Chart",
+		"Status": "3",
+		"Package": "Standard Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "9a197ab0-c63b-11e6-a71a-ab32ef120aaf",
+		"Name": "Table",
+		"Status": "2",
+		"Package": "Standard Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "39a761b0-46e7-11e7-8b40-65abdf466dc4",
+		"Name": "Basic Network Diagram",
+		"Status": "2",
+		"Package": "Standard Visualization,Network Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "",
+		"Name": "Bar Chart",
+		"Status": "0",
+		"Package": "Standard Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "6f40b5c0-5ea7-11e6-a169-7f07422c392f",
+		"Name": "Tile Plot",
+		"Status": "2",
+		"Package": "Standard Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "e4061ea0-8835-11e7-b700-9b0d5c0b567a",
+		"Name": "Basic Parallel Coordinates",
+		"Status": "2",
+		"Package": "Advanced Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "150ce470-5024-11e6-902d-e37d19600b46",
+		"Name": "Discrete Color Legend",
+		"Status": "2",
+		"Package": "Legend",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "",
+		"Name": "Continuous Color Legend",
+		"Status": "0",
+		"Package": "Legend",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "",
+		"Name": "Lines Color Legend",
+		"Status": "0",
+		"Package": "Legend",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "5a4083d0-40e7-11e7-8f03-d5555415aca8",
+		"Name": "Treemap",
+		"Status": "2",
+		"Package": "Hierarchy",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "",
+		"Name": "Choropleth Map",
+		"Status": "1",
+		"Package": "Map,Geospatial,Standard Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "",
+		"Name": "Basic Line chart",
+		"Status": "1",
+		"Package": "Time Series,Standard Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "758e8710-9a22-11e7-be05-eb4da6817d8c",
+		"Name": "Multiple Line Chart",
+		"Status": "3",
+		"Package": "Time Series,Standard Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "37973c00-9c7e-11e7-be05-eb4da6817d8c",
+		"Name": "Stacked Area Chart",
+		"Status": "3",
+		"Package": "Time Series,Standard Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "",
+		"Name": "Points Map",
+		"Status": "1",
+		"Package": "Map,Geospatial,Standard Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "",
+		"Name": "Stacked/Grouped Bar Chart",
+		"Status": "2",
+		"Package": "Standard Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "1f41f3a0-c210-11e6-b059-579760cb8da5",
+		"Name": "Violin Plot",
+		"Status": "2",
+		"Package": "Statistical,Standard Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "",
+		"Name": "Bump Plot",
+		"Status": "0",
+		"Package": "Standard Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "",
+		"Name": "Slope Graph",
+		"Status": "0",
+		"Package": "Standard Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "dd1afc10-8f23-11e7-a097-59adab057768",
+		"Name": "Whisker Plot",
+		"Status": "2",
+		"Package": "Standard Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "d33fe130-5a97-11e7-aea1-21fcd1983f7c",
+		"Name": "Result List",
+		"Status": "3",
+		"Package": "Standard Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "8f3f3c40-2510-11e7-b572-8114193a6ff4",
+		"Name": "Button",
+		"Status": "3",
+		"Package": "Semantic UI",
+		"Category": "UI"
+	},
+	{
+		"UUID": "b8224450-7b90-11e7-b830-0752321d481f",
+		"Name": "Range Slider",
+		"Status": "3",
+		"Package": "Semantic UI,Input",
+		"Category": "UI"
+	},
+	{
+		"UUID": "76418a60-30da-11e7-9362-6128ebe500b8",
+		"Name": "Button Group",
+		"Status": "3",
+		"Package": "Semantic UI",
+		"Category": "UI"
+	},
+	{
+		"UUID": "df789280-5056-11e7-aea1-21fcd1983f7c",
+		"Name": "Port Configuration",
+		"Status": "2",
+		"Package": "Semantic UI,Input",
+		"Category": "UI"
+	},
+	{
+		"UUID": "1037f070-2512-11e7-b572-8114193a6ff4",
+		"Name": "Select List",
+		"Status": "3",
+		"Package": "Semantic UI,Input",
+		"Category": "UI"
+	},
+	{
+		"UUID": "b05faac0-253a-11e7-b572-8114193a6ff4",
+		"Name": "Text Box",
+		"Status": "3",
+		"Package": "Semantic UI,Input",
+		"Category": "UI"
+	},
+	{
+		"UUID": "7e82f700-4fb0-11e7-aea1-21fcd1983f7c",
+		"Name": "Text Area",
+		"Status": "3",
+		"Package": "Semantic UI,Input",
+		"Category": "UI"
+	},
+	{
+		"UUID": "b630ff10-8e7d-11e7-a097-59adab057768",
+		"Name": "Checkbox",
+		"Status": "3",
+		"Package": "Semantic UI,Input",
+		"Category": "UI"
+	},
+	{
+		"UUID": "580e2c80-3f10-11e7-8f03-d5555415aca8",
+		"Name": "Loading Indicator",
+		"Status": "3",
+		"Package": "Semantic UI,Indication",
+		"Category": "UI"
+	},
+	{
+		"UUID": "2b4af730-9495-11e6-aa1b-8b6f4991bd08",
+		"Name": "Date Picker",
+		"Status": "2",
+		"Package": "",
+		"Category": "UI"
+	},
+	{
+		"UUID": "d159fa40-9251-11e6-aa1b-8b6f4991bd08",
+		"Name": "Progress Bar",
+		"Status": "2",
+		"Package": "Indication",
+		"Category": "UI"
+	},
+	{
+		"UUID": "a1e1b8b0-247f-11e6-aa9b-23ffb7ae8f3e",
+		"Name": "File Drop Target",
+		"Status": "2",
+		"Package": "Input",
+		"Category": "UI"
+	},
+	{
+		"UUID": "fe926f90-659d-11e7-8175-6f65b4935d1f",
+		"Name": "Tag Manager",
+		"Status": "2",
+		"Package": "",
+		"Category": "UI"
+	},
+	{
+		"UUID": "7ecf5a10-1392-11e6-968b-ab011525b50a",
+		"Name": "Notification",
+		"Status": "2",
+		"Package": "Indication",
+		"Category": "UI"
+	},
+	{
+		"UUID": "a47490a0-2413-11e6-aa9b-23ffb7ae8f3e",
+		"Name": "Radio Buttons",
+		"Status": "2",
+		"Package": "",
+		"Category": "UI"
+	},
+	{
+		"UUID": "e4d16870-b428-11e7-9014-effa922f4744",
+		"Name": "Basic Tooltip",
+		"Status": "3",
+		"Package": "Semantic UI",
+		"Category": "UI"
+	},
+	{
+		"UUID": "b1a2da20-6bfc-11e7-828e-6f3ca540f23c",
+		"Name": "Text Input with Button",
+		"Status": "3",
+		"Package": "Semantic UI,Input",
+		"Category": "UI"
+	},
+	{
+		"UUID": "",
+		"Name": "Label",
+		"Status": "0",
+		"Package": "Display",
+		"Category": "UI"
+	},
+	{
+		"UUID": "",
+		"Name": "Unordered List",
+		"Status": "0",
+		"Package": "Display",
+		"Category": "UI"
+	},
+	{
+		"UUID": "",
+		"Name": "Code Editor",
+		"Status": "0",
+		"Package": "",
+		"Category": "UI"
+	},
+	{
+		"UUID": "",
+		"Name": "Menu",
+		"Status": "0",
+		"Package": "Navigation",
+		"Category": "UI"
+	},
+	{
+		"UUID": "b0d4a210-4878-11e7-aea1-21fcd1983f7c",
+		"Name": "Accordion",
+		"Status": "2",
+		"Package": "Display",
+		"Category": "UI"
+	},
+	{
+		"UUID": "157c29b0-1e38-11e7-b572-8114193a6ff4",
+		"Name": "WebGL Network Diagram",
+		"Status": "3",
+		"Package": "Network Visualization,Network,Advanced Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "a1259410-7c4d-11e7-aee7-c5bc51074750",
+		"Name": "Parallel Coordinates",
+		"Status": "2",
+		"Package": "Advanced Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "afe3b2a0-49f1-11e6-8fb0-6b5ca854b2c5",
+		"Name": "Word Cloud",
+		"Status": "2",
+		"Package": "Text Visualization,Standard Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "08460830-5dc4-11e7-aea1-21fcd1983f7c",
+		"Name": "Basic Word Cloud",
+		"Status": "2",
+		"Package": "Text Visualization,Standard Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "09e9bbb0-52c4-11e7-aea1-21fcd1983f7c",
+		"Name": "Heatmap",
+		"Status": "2",
+		"Package": "Standard Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "9d272a00-5e6b-11e6-a169-7f07422c392f",
+		"Name": "Network Diagram",
+		"Status": "2",
+		"Package": "Standard Visualization,Network Visualization,Network",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "f9442cf0-42d9-11e6-b79b-ebb646fd0e2c",
+		"Name": "Dendrogram",
+		"Status": "2",
+		"Package": "Standard Visualization,Hierarchy",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "1f321fe0-4f77-11e6-902d-e37d19600b46",
+		"Name": "Sankey Diagram",
+		"Status": "2",
+		"Package": "Advanced Visualization,Network Visualization,Network",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "a59e36d0-43c0-11e6-acfd-af37d5f80ca4",
+		"Name": "Stacked/Grouped Bar Chart",
+		"Status": "2",
+		"Package": "Standard Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "",
+		"Name": "Overlap Diagram",
+		"Status": "0",
+		"Package": "Advanced Visualization,Network Visualization,Network",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "",
+		"Name": "Leaflet Map",
+		"Status": "2",
+		"Package": "Map",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "",
+		"Name": "Box Plot",
+		"Status": "0",
+		"Package": "Statistical,Standard Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "",
+		"Name": "Bullet Chart",
+		"Status": "0",
+		"Package": "Standard Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "",
+		"Name": "3D Scatterplot",
+		"Status": "0",
+		"Package": "3D",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "",
+		"Name": "Longitudinal Bubble Plot",
+		"Status": "0",
+		"Package": "Time Series",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "c93813c0-a795-11e6-8a10-95ebc9fc1740",
+		"Name": "MySQL Query",
+		"Status": "2",
+		"Package": "MySQL,Relational",
+		"Category": "Data"
+	},
+	{
+		"UUID": "c792a210-4917-11e6-8fb0-6b5ca854b2c5",
+		"Name": "Rest API Call",
+		"Status": "2",
+		"Package": "API",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "ElasticSearch Query",
+		"Status": "2",
+		"Package": "ElasticSearch",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "ElasticSearch Update",
+		"Status": "2",
+		"Package": "ElasticSearch",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "ElasticSearch Insert",
+		"Status": "2",
+		"Package": "ElasticSearch",
+		"Category": "Data"
+	},
+	{
+		"UUID": "42bf9aa0-adc3-11e6-8a10-95ebc9fc1740",
+		"Name": "Duffle SQL ",
+		"Status": "2",
+		"Package": "",
+		"Category": "Data"
+	},
+	{
+		"UUID": "f86f6400-cc92-11e6-a76b-4f1e32f4a2f1",
+		"Name": "MySQL Update",
+		"Status": "2",
+		"Package": "MySQL,Relational",
+		"Category": "Data"
+	},
+	{
+		"UUID": "10296590-a84f-11e6-8a10-95ebc9fc1740",
+		"Name": "MySQL Insert",
+		"Status": "2",
+		"Package": "MySQL,Relational",
+		"Category": "Data"
+	},
+	{
+		"UUID": "39544210-01ae-11e7-aa55-ffd0e0e86bf2",
+		"Name": "MySQL Stored Procedure",
+		"Status": "2",
+		"Package": "MySQL,Relational",
+		"Category": "Data"
+	},
+	{
+		"UUID": "ebf4b680-4eb1-11e6-902d-e37d19600b46",
+		"Name": "PostgreSQL Query",
+		"Status": "2",
+		"Package": "PostgreSQL,Relational",
+		"Category": "Data"
+	},
+	{
+		"UUID": "61bb0710-207c-11e7-b572-8114193a6ff4",
+		"Name": "Parse Excel",
+		"Status": "2",
+		"Package": "Excel",
+		"Category": "Data"
+	},
+	{
+		"UUID": "48fd78e0-3719-11e6-acbd-475d4429cea6",
+		"Name": "Export to Excel",
+		"Status": "2",
+		"Package": "Excel,Export",
+		"Category": "Data"
+	},
+	{
+		"UUID": "e71a2200-b7d7-11e6-9d9e-514ff5cdcc6c",
+		"Name": "Parse Delimited File",
+		"Status": "2",
+		"Package": "CSV,TSV",
+		"Category": "Data"
+	},
+	{
+		"UUID": "16298a20-3cbf-11e6-acbd-475d4429cea6",
+		"Name": "Export to Delimited File",
+		"Status": "2",
+		"Package": "Export",
+		"Category": "Data"
+	},
+	{
+		"UUID": "4fc0e130-a5f5-11e6-8a10-95ebc9fc1740",
+		"Name": "Parse PDF",
+		"Status": "2",
+		"Package": "PDF",
+		"Category": "Data"
+	},
+	{
+		"UUID": "5912a700-a28a-11e6-85dc-7328c4b73993",
+		"Name": "Export to PDF",
+		"Status": "2",
+		"Package": "PDF,Export",
+		"Category": "Data"
+	},
+	{
+		"UUID": "cb277460-3499-11e6-9e23-d73054bac620",
+		"Name": "Neo4j Query",
+		"Status": "2",
+		"Package": "Neo4j,Network",
+		"Category": "Data"
+	},
+	{
+		"UUID": "d90eb9c0-72ca-11e6-950d-ed330213b501",
+		"Name": "Neo4j Insert",
+		"Status": "2",
+		"Package": "Neo4j,Network",
+		"Category": "Data"
+	},
+	{
+		"UUID": "d5150cc0-a21c-11e7-9f77-07e1cb3c2acf",
+		"Name": "Google Sheets Connector",
+		"Status": "3",
+		"Package": "Google,Spreadsheet",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "PostgreSQL Update",
+		"Status": "0",
+		"Package": "PostgreSQL,Relational",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "PostgreSQL Insert",
+		"Status": "0",
+		"Package": "PostgreSQL,Relational",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "SPARQL Query",
+		"Status": "2",
+		"Package": "Network,RDF",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "SPARQL Update",
+		"Status": "0",
+		"Package": "Network,RDF",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "data.world SQL Query",
+		"Status": "2",
+		"Package": "Open Data,Relational,data.world",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "data.world SPARQL Query",
+		"Status": "2",
+		"Package": "Open Data,RDF,data.world",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "data.world Download File",
+		"Status": "2",
+		"Package": "Open Data,data.world",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "data.world Write File",
+		"Status": "2",
+		"Package": "data.world,Export",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "PubMed Query",
+		"Status": "2",
+		"Package": "Open Data,PubMed",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "Basic PubMed Search",
+		"Status": "0",
+		"Package": "Open Data,PubMed",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "ClinicalTrials.Gov Query",
+		"Status": "0",
+		"Package": "Open Data,Clinical Trials",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "Basic ClinicalTrials.Gov Search",
+		"Status": "0",
+		"Package": "Open Data,Clinical Trials",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "OData Query",
+		"Status": "1",
+		"Package": "API",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "Download Dropbox File",
+		"Status": "0",
+		"Package": "DropBox",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "Upload Dropbox File",
+		"Status": "0",
+		"Package": "DropBox",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "SQL Server Query",
+		"Status": "2",
+		"Package": "Relational,SQL Server",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "SQL Server Update",
+		"Status": "2",
+		"Package": "Relational,SQL Server",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "SQl Server Insert",
+		"Status": "2",
+		"Package": "Relational,SQL Server",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "Oracle Query",
+		"Status": "0",
+		"Package": "Oracle,Relational",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "Oracle Update",
+		"Status": "0",
+		"Package": "Oracle,Relational",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "Oracle Insert",
+		"Status": "0",
+		"Package": "Oracle,Relational",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "Neo4j Update",
+		"Status": "0",
+		"Package": "Neo4j,Network",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "MongoDB Query",
+		"Status": "0",
+		"Package": "Mongo,Document",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "MongoDB Update",
+		"Status": "0",
+		"Package": "Mongo,Document",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "MongoDB Insert",
+		"Status": "0",
+		"Package": "Mongo,Document",
+		"Category": "Data"
+	},
+	{
+		"UUID": "",
+		"Name": "K-Means Clustering",
+		"Status": "2",
+		"Package": "Clustering",
+		"Category": "Algorithm"
+	},
+	{
+		"UUID": "",
+		"Name": "Word Frequency",
+		"Status": "2",
+		"Package": "Text Mining",
+		"Category": "Algorithm"
+	},
+	{
+		"UUID": "",
+		"Name": "Text Clustering",
+		"Status": "2",
+		"Package": "Clustering,Text Mining,NLP",
+		"Category": "Algorithm"
+	},
+	{
+		"UUID": "",
+		"Name": "Text Network",
+		"Status": "2",
+		"Package": "Network Visualization,Text Mining,NLP",
+		"Category": "Algorithm"
+	},
+	{
+		"UUID": "",
+		"Name": "Graph Tabular",
+		"Status": "2",
+		"Package": "Network,Relational",
+		"Category": "Algorithm"
+	},
+	{
+		"UUID": "",
+		"Name": "Numeric Binning",
+		"Status": "2",
+		"Package": "",
+		"Category": "Algorithm"
+	},
+	{
+		"UUID": "",
+		"Name": "Hierarchical Clustering",
+		"Status": "0",
+		"Package": "",
+		"Category": "Algorithm"
+	},
+	{
+		"UUID": "",
+		"Name": "Concept Extraction",
+		"Status": "0",
+		"Package": "Text Mining,NLP",
+		"Category": "Algorithm"
+	},
+	{
+		"UUID": "",
+		"Name": "Entity Extraction",
+		"Status": "0",
+		"Package": "Text Mining,NLP",
+		"Category": "Algorithm"
+	},
+	{
+		"UUID": "",
+		"Name": "Decision Tree Classifier",
+		"Status": "2",
+		"Package": "Classification",
+		"Category": "Algorithm"
+	},
+	{
+		"UUID": "",
+		"Name": "String Distance ",
+		"Status": "2",
+		"Package": "",
+		"Category": "Algorithm"
+	},
+	{
+		"UUID": "",
+		"Name": "Cateorical Binning",
+		"Status": "2",
+		"Package": "",
+		"Category": "Algorithm"
+	},
+	{
+		"UUID": "",
+		"Name": "Topic Modeling",
+		"Status": "2",
+		"Package": "NLP,Text Mining",
+		"Category": "Algorithm"
+	},
+	{
+		"UUID": "",
+		"Name": "Aggregator",
+		"Status": "2",
+		"Package": "",
+		"Category": "Utility"
+	},
+	{
+		"UUID": "",
+		"Name": "Accumulator",
+		"Status": "2",
+		"Package": "",
+		"Category": "Utility"
+	},
+	{
+		"UUID": "",
+		"Name": "Firebase Authentication",
+		"Status": "2",
+		"Package": "Authentication",
+		"Category": "Utility"
+	},
+	{
+		"UUID": "",
+		"Name": "Cognito Authentication",
+		"Status": "2",
+		"Package": "Authentication",
+		"Category": "Utility"
+	},
+	{
+		"UUID": "",
+		"Name": "Filter Duffle Attributes",
+		"Status": "2",
+		"Package": "",
+		"Category": "Utility"
+	},
+	{
+		"UUID": "",
+		"Name": "Format Transform",
+		"Status": "0",
+		"Package": "",
+		"Category": "Utility"
+	},
+	{
+		"UUID": "",
+		"Name": "File Download",
+		"Status": "0",
+		"Package": "Export,Excel,CSV,TSV",
+		"Category": "Utility"
+	},
+	{
+		"UUID": "",
+		"Name": "Log to Freshdesk",
+		"Status": "0",
+		"Package": "",
+		"Category": "Non-Standard"
+	},
+	{
+		"UUID": "61df1a70-af82-11e7-871e-bb0d80bd3e80",
+		"Name": "String Templating",
+		"Status": "2",
+		"Package": "",
+		"Category": "Utility"
+	},
+	{
+		"UUID": "",
+		"Name": "Modal",
+		"Status": "0",
+		"Package": "",
+		"Category": "Layout"
+	},
+	{
+		"UUID": "",
+		"Name": "Slideout Panel",
+		"Status": "0",
+		"Package": "",
+		"Category": "Layout"
+	},
+	{
+		"UUID": "",
+		"Name": "Pop Up",
+		"Status": "0",
+		"Package": "",
+		"Category": "Layout"
+	},
+	{
+		"UUID": "",
+		"Name": "Login Form",
+		"Status": "0",
+		"Package": "",
+		"Category": "Layout"
+	},
+	{
+		"UUID": "",
+		"Name": "Embed",
+		"Status": "0",
+		"Package": "",
+		"Category": "Layout"
+	},
+	{
+		"UUID": "",
+		"Name": "Message",
+		"Status": "0",
+		"Package": "Notification",
+		"Category": "UI"
+	},
+	{
+		"UUID": "",
+		"Name": "Reveal",
+		"Status": "0",
+		"Package": "",
+		"Category": "Layout"
+	},
+	{
+		"UUID": "",
+		"Name": "Steps",
+		"Status": "0",
+		"Package": "Navigation",
+		"Category": "UI"
+	},
+	{
+		"UUID": "7a8e30be-9c06-46e4-9337-5645d6534571",
+		"Name": "Visibility Toggle",
+		"Status": "2",
+		"Package": "",
+		"Category": "Layout"
+	},
+	{
+		"UUID": "",
+		"Name": "Send Email",
+		"Status": "2",
+		"Package": "",
+		"Category": "Utility"
+	},
+	{
+		"UUID": "",
+		"Name": "Send SMS",
+		"Status": "0",
+		"Package": "",
+		"Category": "Utility"
+	},
+	{
+		"UUID": "",
+		"Name": "Add or Remove Entity from Duffle",
+		"Status": "2",
+		"Package": "Dataflow Utility",
+		"Category": "Utility"
+	},
+	{
+		"UUID": "",
+		"Name": "String to Value Selector",
+		"Status": "2",
+		"Package": "",
+		"Category": "Utility"
+	},
+	{
+		"UUID": "",
+		"Name": "Map",
+		"Status": "0",
+		"Package": "Dataflow Utility",
+		"Category": "Utility"
+	},
+	{
+		"UUID": "",
+		"Name": "Geocode",
+		"Status": "2",
+		"Package": "",
+		"Category": "Utility"
+	},
+	{
+		"UUID": "",
+		"Name": "Reverse Geocode",
+		"Status": "2",
+		"Package": "",
+		"Category": "Utility"
+	},
+	{
+		"UUID": "",
+		"Name": "Tabs",
+		"Status": "0",
+		"Package": "Navigation",
+		"Category": "UI"
+	},
+	{
+		"UUID": "",
+		"Name": "Tabs + Visibility Toggle",
+		"Status": "0",
+		"Package": "Navigation",
+		"Category": "Layout"
+	},
+	{
+		"UUID": "",
+		"Name": "Menu + Visibility Toggle",
+		"Status": "0",
+		"Package": "Navigation",
+		"Category": "Layout"
+	},
+	{
+		"UUID": "d4f941e0-63be-11e6-8493-83a9622113de",
+		"Name": "Data Driver",
+		"Status": "2",
+		"Package": "Dataflow Utility",
+		"Category": "Utility"
+	},
+	{
+		"UUID": "a8cb0a24-6610-47fa-b394-c24bc6ad3e43",
+		"Name": "Switch",
+		"Status": "2",
+		"Package": "Dataflow Utility",
+		"Category": "Utility"
+	},
+	{
+		"UUID": "6088f660-2b56-11e7-b572-8114193a6ff4",
+		"Name": "Highlight Words",
+		"Status": "2",
+		"Package": "Text Visualization",
+		"Category": "Utility"
+	},
+	{
+		"UUID": "bf63bd00-2715-11e6-8e0a-a398958211f7",
+		"Name": "Tree Browser",
+		"Status": "2",
+		"Package": "Hierarchy,Standard Visualization",
+		"Category": "Visualization"
+	},
+	{
+		"UUID": "823c13e0-aa5b-11e6-8a10-95ebc9fc1740",
+		"Name": "Selectable List",
+		"Status": "2",
+		"Package": "Semantic UI",
+		"Category": "UI"
+	}
+]
